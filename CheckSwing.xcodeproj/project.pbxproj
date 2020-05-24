@@ -13,9 +13,11 @@
 		C57DCE36247B05F00078C4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57DCE34247B05F00078C4CD /* Main.storyboard */; };
 		C57DCE38247B05F30078C4CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57DCE37247B05F30078C4CD /* Assets.xcassets */; };
 		C57DCE3B247B05F30078C4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57DCE39247B05F30078C4CD /* LaunchScreen.storyboard */; };
+		D8FC688D1BB8C0285D864B81 /* Pods_CheckSwing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CC30DD7972427EC4B3F6DD /* Pods_CheckSwing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A938D474E75B93B5F9F95985 /* Pods-CheckSwing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckSwing.debug.xcconfig"; path = "Target Support Files/Pods-CheckSwing/Pods-CheckSwing.debug.xcconfig"; sourceTree = "<group>"; };
 		C57DCE2B247B05F00078C4CD /* CheckSwing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckSwing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57DCE2E247B05F00078C4CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C57DCE30247B05F00078C4CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		C57DCE37247B05F30078C4CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57DCE3A247B05F30078C4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57DCE3C247B05F30078C4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5159FEA3B55760C94B894CB /* Pods-CheckSwing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckSwing.release.xcconfig"; path = "Target Support Files/Pods-CheckSwing/Pods-CheckSwing.release.xcconfig"; sourceTree = "<group>"; };
+		E6CC30DD7972427EC4B3F6DD /* Pods_CheckSwing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckSwing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FC688D1BB8C0285D864B81 /* Pods_CheckSwing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753C8A5A6C6ED2FA1F3FD513 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A938D474E75B93B5F9F95985 /* Pods-CheckSwing.debug.xcconfig */,
+				E5159FEA3B55760C94B894CB /* Pods-CheckSwing.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C57DCE22247B05F00078C4CD = {
 			isa = PBXGroup;
 			children = (
 				C57DCE2D247B05F00078C4CD /* CheckSwing */,
 				C57DCE2C247B05F00078C4CD /* Products */,
+				753C8A5A6C6ED2FA1F3FD513 /* Pods */,
+				F4EFFEAB430563AD5E51BE0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,47 @@
 		C57DCE2D247B05F00078C4CD /* CheckSwing */ = {
 			isa = PBXGroup;
 			children = (
+				C57DCE42247B06100078C4CD /* Model */,
+				C57DCE43247B061A0078C4CD /* View */,
+				C57DCE44247B06200078C4CD /* Controller */,
 				C57DCE2E247B05F00078C4CD /* AppDelegate.swift */,
 				C57DCE30247B05F00078C4CD /* SceneDelegate.swift */,
-				C57DCE32247B05F00078C4CD /* ViewController.swift */,
-				C57DCE34247B05F00078C4CD /* Main.storyboard */,
 				C57DCE37247B05F30078C4CD /* Assets.xcassets */,
 				C57DCE39247B05F30078C4CD /* LaunchScreen.storyboard */,
 				C57DCE3C247B05F30078C4CD /* Info.plist */,
 			);
 			path = CheckSwing;
+			sourceTree = "<group>";
+		};
+		C57DCE42247B06100078C4CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C57DCE43247B061A0078C4CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C57DCE34247B05F00078C4CD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C57DCE44247B06200078C4CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C57DCE32247B05F00078C4CD /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F4EFFEAB430563AD5E51BE0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6CC30DD7972427EC4B3F6DD /* Pods_CheckSwing.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C57DCE3F247B05F30078C4CD /* Build configuration list for PBXNativeTarget "CheckSwing" */;
 			buildPhases = (
+				3CA0ACB405A35333312EDF7E /* [CP] Check Pods Manifest.lock */,
 				C57DCE27247B05F00078C4CD /* Sources */,
 				C57DCE28247B05F00078C4CD /* Frameworks */,
 				C57DCE29247B05F00078C4CD /* Resources */,
+				462050929EBA6C593F33E409 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +183,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CA0ACB405A35333312EDF7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CheckSwing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		462050929EBA6C593F33E409 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheckSwing/Pods-CheckSwing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheckSwing/Pods-CheckSwing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CheckSwing/Pods-CheckSwing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C57DCE27247B05F00078C4CD /* Sources */ = {
@@ -282,6 +375,7 @@
 		};
 		C57DCE40247B05F30078C4CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A938D474E75B93B5F9F95985 /* Pods-CheckSwing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +393,7 @@
 		};
 		C57DCE41247B05F30078C4CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5159FEA3B55760C94B894CB /* Pods-CheckSwing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
