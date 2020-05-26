@@ -11,7 +11,7 @@
 Pods/
 
 ## Google Firebase
-*.GoogleService-Info.plist
+CheckSwing/GoogleService-Info.plist
 
 ### Xcode ###
 # Xcode
@@ -50,3 +50,5 @@ DerivedData/
 
 
 # End of https://www.gitignore.io/api/xcode,cocoapods
+
+
