@@ -14,6 +14,8 @@
 		C57DCE38247B05F30078C4CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57DCE37247B05F30078C4CD /* Assets.xcassets */; };
 		C57DCE3B247B05F30078C4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57DCE39247B05F30078C4CD /* LaunchScreen.storyboard */; };
 		C57DCE46247B0BD20078C4CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57DCE45247B0BD20078C4CD /* Constants.swift */; };
+		C57DCE48247C691C0078C4CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57DCE47247C691C0078C4CD /* GoogleService-Info.plist */; };
+		C5DBEB2C247DBAFC00C61DFE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DBEB2B247DBAFC00C61DFE /* RegisterViewController.swift */; };
 		D8FC688D1BB8C0285D864B81 /* Pods_CheckSwing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CC30DD7972427EC4B3F6DD /* Pods_CheckSwing.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		C57DCE3A247B05F30078C4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57DCE3C247B05F30078C4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C57DCE45247B0BD20078C4CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C57DCE47247C691C0078C4CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5DBEB2B247DBAFC00C61DFE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E5159FEA3B55760C94B894CB /* Pods-CheckSwing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckSwing.release.xcconfig"; path = "Target Support Files/Pods-CheckSwing/Pods-CheckSwing.release.xcconfig"; sourceTree = "<group>"; };
 		E6CC30DD7972427EC4B3F6DD /* Pods_CheckSwing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckSwing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +86,7 @@
 				C57DCE37247B05F30078C4CD /* Assets.xcassets */,
 				C57DCE39247B05F30078C4CD /* LaunchScreen.storyboard */,
 				C57DCE3C247B05F30078C4CD /* Info.plist */,
+				C57DCE47247C691C0078C4CD /* GoogleService-Info.plist */,
 				C57DCE45247B0BD20078C4CD /* Constants.swift */,
 			);
 			path = CheckSwing;
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				C57DCE32247B05F00078C4CD /* WelcomeViewController.swift */,
+				C5DBEB2B247DBAFC00C61DFE /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 				C57DCE28247B05F00078C4CD /* Frameworks */,
 				C57DCE29247B05F00078C4CD /* Resources */,
 				462050929EBA6C593F33E409 /* [CP] Embed Pods Frameworks */,
+				73BF9C3E0525A57F86A2B8EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57DCE3B247B05F30078C4CD /* LaunchScreen.storyboard in Resources */,
+				C57DCE48247C691C0078C4CD /* GoogleService-Info.plist in Resources */,
 				C57DCE38247B05F30078C4CD /* Assets.xcassets in Resources */,
 				C57DCE36247B05F00078C4CD /* Main.storyboard in Resources */,
 			);
@@ -226,6 +234,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CheckSwing/Pods-CheckSwing-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		73BF9C3E0525A57F86A2B8EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheckSwing/Pods-CheckSwing-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CheckSwing/Pods-CheckSwing-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CheckSwing/Pods-CheckSwing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -234,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57DCE33247B05F00078C4CD /* WelcomeViewController.swift in Sources */,
+				C5DBEB2C247DBAFC00C61DFE /* RegisterViewController.swift in Sources */,
 				C57DCE2F247B05F00078C4CD /* AppDelegate.swift in Sources */,
 				C57DCE31247B05F00078C4CD /* SceneDelegate.swift in Sources */,
 				C57DCE46247B0BD20078C4CD /* Constants.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="43e-zS-lQb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -32,6 +32,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" name="CheckSea"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ek9-7t-hAB" kind="show" id="u9W-fm-p8Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAY-ak-ziG" userLabel="Log In">
                                 <rect key="frame" x="0.0" y="767" width="414" height="65"/>
@@ -58,16 +61,125 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="e6X-nN-LxJ"/>
                     <connections>
                         <outlet property="titleLabel" destination="1vb-YQ-4W3" id="s0A-5M-81h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="1Mh-Uf-xX4">
+            <objects>
+                <viewController id="ek9-7t-hAB" userLabel="Register View Controller" customClass="RegisterViewController" customModule="CheckSwing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3fW-XD-JGC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tO3-GN-E6u" userLabel="EmailView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="177"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="GXM-VH-uYG">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="137"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ud5-A1-DdG" userLabel="Email Textfield">
+                                        <rect key="frame" x="48" y="50" width="318" height="45"/>
+                                        <color key="textColor" name="CheckWave"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ud5-A1-DdG" secondAttribute="bottom" constant="82" id="0tr-5g-OwM"/>
+                                    <constraint firstAttribute="height" constant="177" id="6kq-VK-NPj"/>
+                                    <constraint firstItem="ud5-A1-DdG" firstAttribute="leading" secondItem="tO3-GN-E6u" secondAttribute="leading" constant="48" id="Dbb-22-yJK"/>
+                                    <constraint firstItem="ud5-A1-DdG" firstAttribute="top" secondItem="tO3-GN-E6u" secondAttribute="top" constant="50" id="gWj-jh-aLd"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ud5-A1-DdG" secondAttribute="trailing" constant="48" id="nDs-h6-Bhh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ti-42-0gi" userLabel="PasswordView">
+                                <rect key="frame" x="0.0" y="165" width="414" height="177"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="zpS-2Z-g1M">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="137"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8eZ-jz-Z0p" userLabel="Password Textfield">
+                                        <rect key="frame" x="49" y="50" width="317" height="45"/>
+                                        <color key="textColor" name="CheckWave"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zpS-2Z-g1M" firstAttribute="leading" secondItem="1Ti-42-0gi" secondAttribute="leading" id="E3P-7x-U68"/>
+                                    <constraint firstAttribute="trailing" secondItem="zpS-2Z-g1M" secondAttribute="trailing" id="Q10-vX-iIR"/>
+                                    <constraint firstAttribute="height" constant="177" id="a1e-8t-kg3"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8eZ-jz-Z0p" secondAttribute="trailing" constant="48" id="cp9-hT-epi"/>
+                                    <constraint firstAttribute="bottom" secondItem="zpS-2Z-g1M" secondAttribute="bottom" constant="20" id="h4d-7u-qFj"/>
+                                    <constraint firstItem="8eZ-jz-Z0p" firstAttribute="top" secondItem="1Ti-42-0gi" secondAttribute="top" constant="50" id="hbY-J9-7iz"/>
+                                    <constraint firstAttribute="bottom" secondItem="8eZ-jz-Z0p" secondAttribute="bottom" constant="82" id="pS6-ns-2tQ"/>
+                                    <constraint firstItem="zpS-2Z-g1M" firstAttribute="top" secondItem="1Ti-42-0gi" secondAttribute="top" constant="20" id="sBO-Ls-2Q9"/>
+                                    <constraint firstItem="8eZ-jz-Z0p" firstAttribute="leading" secondItem="1Ti-42-0gi" secondAttribute="leading" constant="49" id="uCv-BR-A6f"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzC-ZP-kXO">
+                                <rect key="frame" x="154" y="328" width="107" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerPressed:" destination="ek9-7t-hAB" eventType="touchUpInside" id="pNU-tL-vr1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bq7-Ia-jhh" firstAttribute="trailing" secondItem="1Ti-42-0gi" secondAttribute="trailing" id="6EK-KE-TJZ"/>
+                            <constraint firstItem="1Ti-42-0gi" firstAttribute="leading" secondItem="Bq7-Ia-jhh" secondAttribute="leading" id="A8B-ki-rVM"/>
+                            <constraint firstItem="Bq7-Ia-jhh" firstAttribute="trailing" secondItem="EzC-ZP-kXO" secondAttribute="trailing" constant="153" id="HRI-bV-e2P"/>
+                            <constraint firstItem="EzC-ZP-kXO" firstAttribute="leading" secondItem="Bq7-Ia-jhh" secondAttribute="leading" constant="154" id="Nq9-Io-L0o"/>
+                            <constraint firstItem="tO3-GN-E6u" firstAttribute="top" secondItem="Bq7-Ia-jhh" secondAttribute="top" id="SCQ-Os-CqC"/>
+                            <constraint firstItem="Bq7-Ia-jhh" firstAttribute="trailing" secondItem="tO3-GN-E6u" secondAttribute="trailing" id="eNb-LA-kUa"/>
+                            <constraint firstItem="1Ti-42-0gi" firstAttribute="top" secondItem="tO3-GN-E6u" secondAttribute="bottom" constant="-100" id="fAv-3I-DAW"/>
+                            <constraint firstItem="tO3-GN-E6u" firstAttribute="leading" secondItem="Bq7-Ia-jhh" secondAttribute="leading" id="rlR-zD-x49"/>
+                            <constraint firstItem="EzC-ZP-kXO" firstAttribute="top" secondItem="tO3-GN-E6u" secondAttribute="bottom" constant="63" id="tth-wz-uCh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bq7-Ia-jhh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VO9-3a-FV0"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="ud5-A1-DdG" id="FfR-xg-Wim"/>
+                        <outlet property="passwordTextField" destination="8eZ-jz-Z0p" id="7fn-e6-xm3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewo-bC-8Rk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228.985507246377" y="-19.419642857142858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UGl-Fl-gFT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="43e-zS-lQb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dy8-86-WvD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WtR-dE-TKQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4y-P1-QOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
+        <image name="textfield" width="298" height="93"/>
         <namedColor name="CheckCloud">
             <color red="0.8784313725490196" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
